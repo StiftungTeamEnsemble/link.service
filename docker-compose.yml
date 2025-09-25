@@ -1,0 +1,11 @@
+services:
+  server:
+    image: kutt/kutt:v3.2.3
+    volumes:
+       - /DATA/link/database/:/var/lib/kutt
+       - /DATA/link/custom/:/kutt/custom
+    environment:
+      DB_FILENAME: "/var/lib/kutt/data.sqlite"
+      PORT: 3500
+    ports:
+      - 3500:3500
