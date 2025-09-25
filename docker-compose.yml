@@ -6,6 +6,8 @@ services:
        - /DATA/link/custom/:/kutt/custom
     environment:
       DB_FILENAME: "/var/lib/kutt/data.sqlite"
+      JWT_SECRET: "${JWT_SECRET}"
+      DEFAULT_DOMAIN: link.team-ensemble.ch
       PORT: 3500
     ports:
       - 3500:3500
